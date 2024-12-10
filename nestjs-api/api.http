@@ -1,0 +1,7 @@
+GET http://localhost:3000/places?text=Av. Washington Soares, 1321,
+
+###
+@originId = Ej5SLiA4NSwgNzkxIC0gUHJlZi4gSm9zw6kgV2FsdGVyLCBGb3J0YWxlemEgLSBDRSwgNjA3NjIsIEJyYXNpbCIxEi8KFAoSCR99p4T6UccHEdB0dXRAKdPaEJcGKhQKEgnrxagf-1HHBxE69b9YCmMxwg
+@destinationId = ChIJmyz3V3lFxwcRxgPrHZU3U_A
+
+GET http://localhost:3000/directions?originId={{originId}}&destinationId={{destinationId}}
