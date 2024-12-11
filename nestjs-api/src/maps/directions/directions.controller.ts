@@ -7,8 +7,8 @@ export class DirectionsController {
 
   @Get()
   getDirections(
-    @Query("originId") originId,
-    @Query("destinationId") destinationId,
+    @Query("originId") originId: string,
+    @Query("destinationId") destinationId: string,
   ) {
     return this.directionsService.getDirections(originId, destinationId);
   }

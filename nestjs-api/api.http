@@ -1,7 +1,28 @@
-GET http://localhost:3000/places?text=Av. Washington Soares, 1321,
+GET http://localhost:4000/places?text=av governador valadares, betim, 1000
 
 ###
-@originId = Ej5SLiA4NSwgNzkxIC0gUHJlZi4gSm9zw6kgV2FsdGVyLCBGb3J0YWxlemEgLSBDRSwgNjA3NjIsIEJyYXNpbCIxEi8KFAoSCR99p4T6UccHEdB0dXRAKdPaEJcGKhQKEgnrxagf-1HHBxE69b9YCmMxwg
-@destinationId = ChIJmyz3V3lFxwcRxgPrHZU3U_A
+GET http://localhost:4000/places?text=av amazonas, belo horizonte, 1000
 
-GET http://localhost:3000/directions?originId={{originId}}&destinationId={{destinationId}}
+###
+
+@originId = EkZBdi4gR292LiBWYWxhZGFyZXMsIDEwMDAgLSBTYW50byBBZm9uc28sIEJldGltIC0gTUcsIDMyNjIzLTU3NSwgQnJhc2lsIjESLwoUChIJja7gMwfdpgARgN9V_RFivpEQ6AcqFAoSCfmsiD4H3aYAEdRlj37c-uzz
+@destinationId = ChIJTcM3WRKWpgARIBxMZeldEtM
+
+###
+GET http://localhost:4000/directions?originId={{ originId }}&destinationId={{ destinationId }}
+
+###
+POST http://localhost:4000/routes
+Content-Type: application/json
+
+{
+    "name": "rota 1",
+    "source_id": "{{ originId }}",
+    "destination_id": "{{ destinationId }}"
+}
+
+###
+GET http://localhost:4000/routes
+
+###
+GET http://localhost:4000/routes/674ef78bab1148ea9161c23b
